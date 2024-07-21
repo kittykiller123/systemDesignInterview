@@ -39,5 +39,38 @@
 | Send packet California -> Netherlands -> CA |      150 ms       |
 |                                             |                   |
 
-![[Pasted image 20240717173542.png]]
+![[Pasted image 20240717173542.png | 500]]
+
+
+## Availability numbers
+
+> [!note]
+> High availability is the ability of a system to be continuously operational for a desirably long Period of time. High availability is measured as a percentage, with 100% means a service that has 0 downtime. Most services fall between 99% and 100%.
+
+![[Pasted image 20240719163655.png | 500]]
+
+
+## Example: Estimate Twitter QPS and storage requirements
+
+***Assumptions:***
+- 300 million monthly active users
+- 50% of users use Twitter daily
+- User post 2 tweets per day on average
+- 10% of tweets contain media
+- Data is stored for 5 years
+
+***Estimations:***
+Query per second (QPS) estimate:
+- Daily active users (DAU) = 300 milion * 50% = 150 million
+- Tweets QPS = 150 million * 2 tweets / 24 hour/3600 seconds = ~3500
+- Peek QPS = 2 * QPS = ~7000
+
+
+---
+
+> [!tip] Tips
+> 1. Rounding and approximation
+> 2. Write down your assumptions
+> 3. Label your units
+> 4. 
 
